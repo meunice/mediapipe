@@ -15,26 +15,3 @@
 package(default_visibility = ["//mediapipe/tasks:internal"])
 
 licenses(["notice"])
-
-objc_library(
-    name = "MPPGestureRecognizerResult",
-    srcs = ["sources/MPPGestureRecognizerResult.m"],
-    hdrs = ["sources/MPPGestureRecognizerResult.h"],
-    deps = [
-        "//mediapipe/tasks/ios/components/containers:MPPCategory",
-        "//mediapipe/tasks/ios/components/containers:MPPLandmark",
-        "//mediapipe/tasks/ios/core:MPPTaskResult",
-    ],
-)
-
-objc_library(
-    name = "MPPGestureRecognizerOptions",
-    srcs = ["sources/MPPGestureRecognizerOptions.m"],
-    hdrs = ["sources/MPPGestureRecognizerOptions.h"],
-    deps = [
-        ":MPPGestureRecognizerResult",
-        "//mediapipe/tasks/ios/components/processors:MPPClassifierOptions",
-        "//mediapipe/tasks/ios/core:MPPTaskOptions",
-        "//mediapipe/tasks/ios/vision/core:MPPRunningMode",
-    ],
-)
